@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside>
+<!-- This is for side bar section-->
+<div class="logo">
+ <div class="logo-icon">✓</div>
+     <div class="logo-description">
+        <h3>ToDo</h3>
+        <span>Small steps. Big goals</span>
+     </div>
+
+ </div>
+ <nav>
+    <ul>
+        <li class="active"><button data-filter="all">All Tasks  <span id="count-all"></span></button></li>
+        <li><button data-filter="active">Active <span id="count-active"></span></button></li>
+        <li><button data-filter="completed">Completed <span id="count-completed"></span></button></li>
+    </ul>
+ </nav>
+
+<div class="stats">
+    <h4>Quick Stats</h4>
+    <p>Total Tasks <span id="stat-total">0</span></p>
+    <p>Completed <span id="stat-completed">0</span></p>
+    <p>Active <span id="stat-active">0</span></p>
+    <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <span id="progress-text">0%</span>
+ </div>
+
+        </aside>
+           <main>
+            <button id="menu-btn" class="menu-btn" aria-label="Open-menu">☰</button>
+             <header>
+                <div>
+                <h1 id="greeting">Good morning!</h1>
+                <p>Here's what's on your to-do list today.</p>
+                </div>
+                <span id="current-date">Apr 26, 2025</span>
+             </header>
+             
+             <form id="task-form">
+                <input type="text" id="task-input" placeholder="Add a new task..." required>
+                <button type="submit">Add</button>
+             </form>
+             <div class="toolbar">
+             <div class="filters">
+        <button data-filter="all"  class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+        
+      </div> 
+      
+      <select  id="sort">
+        <option value="due-date">Due date</option>
+        <option value="priority">Priority</option>
+      </select>
+         </div>
+         <ul id="task-list"></ul>
+            
+         
+       </main>
+       <div id="overlay" class="overlay"></div>
+      </div>
+       <script src="script.js"></script>
+</body>
+</html>
